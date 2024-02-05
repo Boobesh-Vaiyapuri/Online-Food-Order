@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+@*<h2>Index</h2>*@
+
+<html>
+<head>
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+        }
+        .img-cover {
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            background-size: cover;
+        }
+
+        .head {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .headpara {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .group-align {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .butn {
+            border: 1px solid black;
+            background-color: yellow;
+            color: white;
+        }
+        .logo{
+            height:70px;
+            width:300px;
+        }
+
+        .menuImg{
+            height:250px;
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <img src="~/images/Zomato cover.png" class="img-cover" />
+        </div>
+        <div class="head">
+            <img src="~/images/Zomato logo.png" class="logo" />
+            <br />
+            <p class="headpara">Find the best restaurants, cafés</p>
+            <center><p class="headpara">and bars in India</p></center>
+        </div>
+    </div>
+    <br />
+    <div>
+        <center>
+            <h1>Popular locations in India</h1>
+            <br />
+            <h4>From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.</h4>
+        </center>
+        <br />
+        <center>
+            <h1>Popular in Tamilnadu</h1>
+            <h4>Choose Your Favorite Food </h4>
+        </center>
+    </div>
+    <br />
+    <div>
+        <div class="group-align">
+            <div class="col-sm-3">
+                <img src="~/images/Biryani.jpg" class="menuImg" />
+                <center>
+                    <h4>Biryani</h4>
+                    <p>"Biryani: where taste meets tradition"</p>
+                    <center><button value="Order" class="butn" onclick="orderRedirect()">@Html.ActionLink("Order", "Order")</button></center>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <img src="~/images/chicken.jpg" class="menuImg" />
+                <center>
+                    <h4>Chicken</h4>
+                    <p>"Eat your chicken just how you like it" </p>
+                    <center><button value="Order" class="butn" onclick="orderRedirect()">@Html.ActionLink("Order", "Order")</button></center>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <img src="~/images/fried rice.jpg" class="menuImg" />
+                <center>
+                    <h4>Fried Rice</h4>
+                    <p>"Bringing smiles one plate of fried rice at a time"</p>
+                    <center><button value="Order" class="butn" onclick="orderRedirect()">@Html.ActionLink("Order", "Order")</button></center>
+                </center>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="group-align">
+            <div class="col-sm-3">
+                <img src="~/images/Dosa.jpg" class="menuImg" />
+                <center>
+                    <h4>Dosa</h4>
+                    <p>"Life is better with dosa on your plate"</p>
+                    <center><button value="Order" class="butn" onclick="orderRedirect()">@Html.ActionLink("Order", "Order")</button></center>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <img src="~/images/parata.jpg" class="menuImg" />
+                <center>
+                    <h4>Parata</h4>
+                    <p>Paratha: Can't stop at just one!</p>
+                    <center><button value="Order" class="butn" onclick="orderRedirect()">@Html.ActionLink("Order", "Order")</button></center>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <img src="~/images/pizza.jpg" class="menuImg" />
+                <center>
+                    <h4>Pizza</h4>
+                    <p>Pizza is the circle of life</p>
+                    <center><button value="Order" class="butn" onclick="orderRedirect()">@Html.ActionLink("Order", "Order")</button></center>
+                </center>
+            </div>
+        </div>
+    </div>
+    <script>
+        function orderRedirect() {
+            var url = '@Url.Action("Order", "Home")';
+        }
+    </script>
+</body>
+</html>

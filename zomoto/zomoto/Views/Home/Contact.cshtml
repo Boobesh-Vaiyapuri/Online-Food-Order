@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+@*<h2>Contact</h2>*@
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #7f1501;
+            color: white;
+        }
+
+        input {
+            background-color: black;
+            color: white;
+            border-radius: 15px;
+            margin: 2px 10px;
+            border-style: none;
+        }
+
+        table {
+            margin: 100px 40%;
+        }
+
+        .cntr {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="cntr">
+        <div>
+            <h2>Report a Safety Emergency</h2>
+            <p>
+                We are committed to the safety ofeveryone using Zomato.
+                <br />
+                <a href="#" style="color:orangered">Report here</a>
+            </p>
+
+            <h2>Issue with your live order?</h2>
+            <p>
+                Click on the 'Support' or 'Online ordering help' <br />
+                section in your app to connect to our customer support team.
+            </p>
+        </div>
+        <br />
+        <div>
+            <input type="text" placeholder="How can we help you?*" />
+            <br />
+            <br />
+            <input type="text" placeholder="Full Name*" />
+            <br />
+            <br />
+            <input type="email" placeholder="Email Address*" />
+            <br />
+            <br />
+            <input type="number" placeholder="Mobile Number*" />
+            <br />
+            <br />
+            <textarea placeholder="Type text*"></textarea>
+            <br />
+            <br />
+            <a href="#"><input type="button" value="Submit feedback" style="background-color:orangered" /></a>
+        </div>
+    </div>
+</body>
+</html>
